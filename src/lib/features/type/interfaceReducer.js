@@ -1,0 +1,2 @@
+export const HANDLE_DARK_MODE = "HANDLE_DARK_MODE";
+export const HANDLE_ACTIVE = "HANDLE_ACTIVE";
