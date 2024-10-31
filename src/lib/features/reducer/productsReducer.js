@@ -11,8 +11,7 @@ export const productsReducer = (state = initialState, action) => {
     case GET_PRODUCTS:
       return {
         ...state,
-        products: action.payload.products,
-        total: action.payload.total,
+        products: action.payload,
       };
 
     case GET_PRODUCT:
