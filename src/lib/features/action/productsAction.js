@@ -1,8 +1,8 @@
 import { GET_PRODUCT, GET_PRODUCTS } from "../type/productsType";
 import Api from "@/api/Api";
 
-export const getProducts = (limit) => async (dispatch) => {
-  const { data } = await Api.get(`/products?limit=${limit}`);
+export const getProducts = () => async (dispatch) => {
+  const { data } = await Api.get(`/products?limit=189`);
 
   dispatch({ type: GET_PRODUCTS, payload: data.products });
 };
