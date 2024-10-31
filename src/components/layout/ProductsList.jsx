@@ -25,18 +25,18 @@ const ProductsList = () => {
   const products = useSelector((state) => state.products.products);
 
   const fetchProducts = () => {
-    dispatch(getProducts(12));
+    dispatch(getProducts(189));
   };
 
-  const handleFilter = (filterParams, value = "all_products") => {
+  const handleFilter = (filterParams = [], value = "all_products") => {
     setActiveTabs(value);
-    if (!filterParams) {
+    if (filterParams.length === 0) {
       setFilterProducts(products);
     } else {
-      console.log("success");
       const filtered = products.filter((item) =>
-        filterParams.includes(item.categories)
+        filterParams.includes(item.category)
       );
+      console.log(filtered);
       setFilterProducts(filtered);
     }
   };
@@ -57,7 +57,7 @@ const ProductsList = () => {
         <Tabs defaultValue={activeTabs}>
           <TabsList className="w-full space-x-2 bg-white">
             <TabsTrigger value="all_products" className="bg-white border">
-              <button onClick={() => handleFilter(mensFashion, "all_products")}>
+              <button onClick={() => handleFilter((value = "all_products"))}>
                 all products
               </button>
             </TabsTrigger>
