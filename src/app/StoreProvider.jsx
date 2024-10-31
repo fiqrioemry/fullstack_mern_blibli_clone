@@ -1,7 +1,7 @@
 "use client";
 
 import store from "@/lib/store";
-import { Provider } from "@radix-ui/react-tooltip";
+import { Provider } from "react-redux";
 
 const StoreProvider = ({ children }) => {
   return <Provider store={store}>{children}</Provider>;

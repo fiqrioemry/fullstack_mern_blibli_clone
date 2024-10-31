@@ -6,21 +6,23 @@ import Link from "next/link";
 const NavDesktop = () => {
   const pathname = usePathname();
   return (
-    <nav>
+    <>
       {links.map((item, index) => {
         return (
           <Link
-            src={item.path}
+            href={item.path}
             key={index}
             className={`${
-              pathname === item.path ? "text-accent" : ""
-            } text-lg text-primary`}
+              pathname === item.path
+                ? "text-primary border-b-[3px] border-primary"
+                : ""
+            } text-lg hover:text-primary  py-2 `}
           >
             {item.name}
           </Link>
         );
       })}
-    </nav>
+    </>
   );
 };
 

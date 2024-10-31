@@ -1,6 +1,7 @@
 import { HANDLE_ACTIVE, HANDLE_DARK_MODE } from "../type/interfaceReducer";
 
 export const handleDarkMode = () => async (dispatch) => {
+  console.log("debug");
   dispatch({ type: HANDLE_DARK_MODE });
 };
 

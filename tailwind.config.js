@@ -1,11 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ["class"],
-  content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+  content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
     container: {
       center: true,
@@ -15,31 +11,21 @@ module.exports = {
       sm: "648px",
       md: "768px",
       lg: "1024px",
-      xl: "1280px",
+      xl: "1200px",
     },
     fontFamily: {
       primary: "var(--font-jetbrainsMono)",
     },
     extend: {
       colors: {
-        primary: "var(--primary)",
-        secondary: "var(--secondary)",
+        primary: "hsl(var(--primary))",
+        secondary: "hsl(var(--tertiary))",
         accent: {
-          DEFAULT: "var(--accent)",
-          hover: "var(--accent-foreground)",
+          DEFAULT: "hsl(var(--accent))",
+          hover: "hsl(var(--accent-hover))",
         },
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-        sidebar: {
-          DEFAULT: "hsl(var(--sidebar-background))",
-          foreground: "hsl(var(--sidebar-foreground))",
-          primary: "hsl(var(--sidebar-primary))",
-          "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
-          accent: "hsl(var(--sidebar-accent))",
-          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
-          border: "hsl(var(--sidebar-border))",
-          ring: "hsl(var(--sidebar-ring))",
-        },
+        background: "hsl(var(--primary))",
+        foreground: "hsl(var(--secondary))",
       },
       borderRadius: {
         lg: "var(--radius)",
